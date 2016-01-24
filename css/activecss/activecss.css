@@ -1,0 +1,282 @@
+<? header("Content-type: text/css; charset: UTF-8"); ?>
+/* note: ALL css files in this folder are */
+/* parsed by default as 'text/html' without */
+/* the content-type header */
+/* active CSS base styles */
+
+.activebody{
+    font-family: Arial, Helvetica;
+    background-color: #eee;
+    width: 99%;
+    height: 99%;
+}
+
+.topbox{
+    position: absolute;
+    overflow: auto;
+    top:       1%;
+    left:      1%;
+    width:    96.7%;
+    height:  5%;
+    padding: 5px;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+.bboxdiv{
+    position: absolute;
+    overflow: auto;
+    top:     8%;
+    left:     1%;
+    width:   14%;
+    height:  87.9%;
+    max-height: 1000px;
+    padding: 5px;
+    border: 0px solid blue;
+    border-radius: 5px;
+    background-color: #afafaf;
+}
+
+.tboxdiv{
+    position: absolute;
+    overflow: auto;
+    top:        8%;
+    height:    13%;
+    left:    16.5%;
+    width:   81.3%;
+    max-width: 10000px;
+    padding: 5px;
+    border: 0px solid green;
+    border-radius: 5px;
+    background-color: #bbbbbb;
+}
+
+.pboxdiv{
+    position: absolute;
+    overflow: none;
+    top:      22.7%;
+    height:   12%;
+    left:   16.5%;
+    width:  81.3%;
+    max-width: 10000px;
+    padding: 5px;
+    border: 0px solid black;
+    border-radius: 5px;
+    background-color: #bbbbbb;
+}
+
+.eboxdiv{
+    position: absolute;
+    overflow: auto;
+    top:       36.5%;
+    height:    12%;
+    left:    16.5%;
+    width:   81.3%;
+    max-width: 10000px;
+    padding:   5px;
+    border: 0px solid green;
+    border-radius: 5px;
+    background-color: #bbbbbb;
+}
+
+.sboxdiv{
+    position: absolute;
+    overflow: auto;
+    top:      50%;
+    height:   47%;
+    left:    16.5%;
+    width:   82.3%;
+    padding;  5px;
+    border: 0px solid black;
+    border-radius: 5px;
+    background-color: #cccccc;
+}
+
+/* boxes stack horizontally or vertically */
+.vbar{
+    margin-top: 7px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.hbar{
+    position: relative;
+    float: left;
+    margin-left: 7px;
+    margin-top: 7px;
+    margin-bottom: auto;
+}
+
+/* windowsboxes are used for browsers/themes and sections */
+.windowbox{
+    position: relative;
+    overflow: none;
+    height: 75px;
+    width: 145px;
+    background-color: #dddddd;
+    padding: 3px;
+    border-radius: 10px;
+    border: 2px solid #dddddd;
+}
+
+/* styleboxes are used for style objects */
+.stylebox{
+    position: relative;
+    overflow: auto;
+    height: 100px;
+    width: 260px;
+    font-size: 12px;
+    background-color: #dddddd;
+    border: 2px solid #dddddd;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.trash{
+    cursor: default;
+    background-color: #dddddd;
+}
+
+/* parts of a windowbox */
+.windowicon{
+    z-index: 100;
+    margin-left: auto;
+    margin-right: auto;
+    float: center;
+    text-align: center;
+}
+
+.inwindowicon{
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    float: center;
+    height: 70px;
+}
+
+.windowtext{
+    z-index: 110;
+    position: absolute;
+    top: 40%;
+    width: 99%;
+    font-weight: 800;
+    margin-left: auto;
+    color: cyan;
+    font-size: 16px;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+/* now we'll setup selectable, draggable and droppable */
+.ui-draggable-dragging{
+    z-index: 200;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+.selectable{
+    cursor: pointer;
+    box-shadow: 0 0 .5em rgba(0,255,0,.9);
+    -moz-box-shadow: 0 0 .5em rgba(0,255,0,.9);
+    -webkit-box-shadow: 0 0 .5em rgba(0,255,0,.9);
+}
+
+.selectable:hover{
+    background-color: #6699ff;
+}
+
+.draggable{
+    cursor: move;
+    box-shadow: 0 0 .7em rgba(255,0,0,.9);
+    -moz-box-shadow: 0 0 .7em rgba(255,0,0,.9);
+    -webkit-box-shadow: 0 0 .7em rgba(255,0,0,.9);
+}
+
+.draggable:hover{
+    background-color: #6699ff;
+}
+
+.droppable{
+}
+
+.droppable:hover{
+    background-color: #6699ff;
+}
+
+/* now we'll setup active/inactive and default/nondefault */
+.isactive{
+    background-color: #66ff66;
+}
+
+.inactive{
+}
+
+.isdefault{
+    background-color: #66ff66;
+}
+
+.nondefault{
+    background-color: #ffff99;
+}
+
+/* while we're dragging some sections will be hilighted */
+.isdragging{
+    border: 2px solid blue;
+}
+
+.candrop{
+    border: 2px solid red;
+    background-color: red;
+}
+
+.insec{
+    background-color: #ffff99;
+}
+
+.nonsec{
+    background-color: #777777;
+    box-shadow: 0 0 .7em rgba(0,0,0,.9);
+    -moz-box-shadow: 0 0 .7em rgba(0,0,0,.9);
+    -webkit-box-shadow: 0 0 .7em rgba(0,0,0,.9);
+}
+
+/* popup dialogue styles */
+.popupdialogue{
+    position: absolute;
+    top:      20px;
+    left:     20px;
+    right:    20px;
+    bottom:   20px;
+    padding:  15px;
+    border: 1px solid blue;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    background-color: #eeeeee;
+    box-shadow: 0 0 .7em rgba(0,0,0,.9);
+    -moz-box-shadow: 0 0 .7em rgba(0,0,0,.9);
+    -webkit-box-shadow: 0 0 .7em rgba(0,0,0,.9);
+}
+
+.subject{
+    color: red;
+    font-weight: 800;
+}
+
+.rbtn{
+    cursor: pointer;
+}
+
+.midstyle{
+    color: red;
+    background-color: #ddaadd;
+    font-weight: 600;
+    padding: 2px;
+}
+
+.noshow{
+    display: none;
+}

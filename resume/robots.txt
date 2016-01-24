@@ -1,0 +1,6 @@
+User-Agent: *
+Disallow: /
+Disallow: /staff/
+Disallow: /js/
+Disallow: /css/
+Disallow: sumrep.txt

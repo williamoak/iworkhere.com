@@ -1,0 +1,8 @@
+# do not need jquery or jqplot
+jquery/
+
+# do not need config libs
+baselib/
+
+# do not need tracker
+tracker/

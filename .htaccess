@@ -1,0 +1,8 @@
+<Files ~ "\.(tpl|sql|inc|log|txt)$">
+Order allow,deny
+Deny from All
+</Files>
+<Files ~ "^\.hta">
+Order allow,deny
+Deny from All
+</Files>
