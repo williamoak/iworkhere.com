@@ -6,3 +6,6 @@ baselib/
 
 # do not need tracker
 tracker/
+
+# do not store credentials
+config/
