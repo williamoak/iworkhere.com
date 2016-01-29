@@ -9,3 +9,5 @@ tracker/
 
 # do not store credentials
 config/
+resume/config
+
